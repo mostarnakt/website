@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+// 1. Import the initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+$blue: #06bcef;
+$orange: #f57716;
+$orange-invert: #0a88e9;
+
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+$primary: $orange;
+$primary-invert: $orange-invert;
+
+// 4. Import the rest of Bulma
+@import "../../node_modules/bulma/bulma";

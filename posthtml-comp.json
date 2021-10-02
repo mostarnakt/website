@@ -1,0 +1,11 @@
+{
+    "input": ["src/html/comp/*.html"],
+    "output": "_dist/comp",
+    "plugins": {
+		"posthtml-modules": {
+            "root": "./html/",
+            "initial": true
+        },
+		"htmlnano": {}
+    }
+}

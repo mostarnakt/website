@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Základní informace o Moštárně Klatovy - služby, cena, rezervace, o moštárně">
+
+		<title>Moštárna Klatovy</title>
+
+		<!-- Icons -->
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">		
+		<link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png"/>
+
+		<!-- Bulma main style sheet -->
+		<link rel="stylesheet" href="css/main.css">
+		
+		<!-- Material design icons, updated font from: https://www.npmjs.com/package/@material-icons/font -->
+		<link rel="stylesheet" href="https://material-icons.github.io/material-icons-font/css/outline.css" />
+	
+		<!-- Javascript -->
+		<script src="jscr/main.js"></script>
+		
+		<!-- Google Adds -->
+		<script data-ad-client="ca-pub-3167131414460081" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	</head>
+	<body>
+
+		<!-- Main Menu -->
+		<module href="src/html/mod/menu.html"></module>
+		<!-- END Main Menu -->
+				
+		<section class="hero is-small is-primary">
+			<figure class="image">
+				<img src="img/title.jpg" alt="Titulní obrázek Moštárny Klatovy" frameborder="0">
+			</figure>				
+		</section>
+
+		<!-- Aktuálně -->
+		<section name="sec-aktuality" class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="aktualne"></a>
+							<!-- Aktuálně - body -->
+							<module href="src/html/mod/aktualne.html"></module>
+							<!-- END Aktuálně - body -->
+							<div id="aktualne_vse"></div>
+							<button class="button is-small is-info is-light" onclick="aktualneShowAllOnClick(this, 'aktualne_vse', 'comp/aktualne_archive.html')">Zobrazit vše</button>
+							<br>
+							<br>
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+    	<!-- Ceník -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="cenik"></a>
+							<!-- Ceník - body -->
+							<module href="src/html/mod/cenik.html"></module>
+							<!-- END Ceník - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+    	<!-- Rezervace -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="rezervace"></a>
+							<!-- Rezervace - body -->
+							<module href="src/html/mod/rezervace.html"></module>
+							<!-- END Rezervace - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    	<!-- Kontakt -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="kontakt"></a>
+							<!-- Kontakt - body -->
+							<module href="src/html/mod/kontakt.html"></module>
+							<!-- END Kontakt - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+
+    	<!-- Moštování -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="mostovani"></a>
+							<!-- Moštování - body -->
+							<module href="src/html/mod/mostovani.html"></module>
+							<!-- END Moštování - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+
+    	<!-- Odkazy -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="odkazy"></a>
+							<!-- Odkazy - body -->
+							<module href="src/html/mod/odkazy.html"></module>
+							<!-- END Odkazy - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Přebytky -->
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-8-desktop is-offset-2-desktop">
+						<div class="content">
+							<a name="prebytky"></a>
+							<!-- Přebytky - body -->
+							<module href="src/html/mod/prebytky.html"></module>
+							<!-- END Přebytky - body -->
+							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+			
+		<!-- Footer -->
+		<module href="src/html/mod/footer.html"></module>
+		<!-- END Footer -->
+
+		<!-- Firebase scripts -->
+		<module href="src/html/mod/firebase.html"></module>
+		<!-- END Firebase scripts -->
+	</body>
+</html>
