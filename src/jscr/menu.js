@@ -1,5 +1,4 @@
 
-
 function burgerMenuAddListener() {	
 	const burgerMenu = document.querySelector('#burgerMenu');
 	const navMenu = document.querySelector('#navMenu');
@@ -8,6 +7,5 @@ function burgerMenuAddListener() {
 		}
 	);
 }
-
 
 burgerMenuAddListener();

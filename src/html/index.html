@@ -9,19 +9,17 @@
 
 		<title>Moštárna Klatovy</title>
 
-		<!-- Icons -->
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">		
 		<link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png"/>
 
 		<!-- Bulma main style sheet -->
-		<link rel="stylesheet" href="css/main.css">
-		
+		<link rel="stylesheet" href="css/main.css">	
 		<!-- Material design icons, updated font from: https://www.npmjs.com/package/@material-icons/font -->
 		<link rel="stylesheet" href="https://material-icons.github.io/material-icons-font/css/outline.css" />
 	
-		<!-- Javascript -->
+		<!-- JavaScript for the functionality of the main page -->
 		<script src="jscr/main.js"></script>
 		
 		<!-- Google Adds -->
@@ -31,7 +29,6 @@
 
 		<!-- Main Menu -->
 		<module href="src/html/mod/menu.html"></module>
-		<!-- END Main Menu -->
 				
 		<section class="hero is-small is-primary">
 			<figure class="image">
@@ -45,12 +42,11 @@
 				<div class="columns">
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
-							<a name="aktualne"></a>
-							<!-- Aktuálně - body -->
-							<module href="src/html/mod/aktualne.html"></module>
-							<!-- END Aktuálně - body -->
-							<div id="aktualne_vse"></div>
-							<button class="button is-small is-info is-light" onclick="aktualneShowAllOnClick(this, 'aktualne_vse', 'comp/aktualne_archive.html')">Zobrazit vše</button>
+							<a name="aktuality"></a>
+							<h2>Aktuality</h2>
+							<div id="placeholder_aktuality"></div>
+							<div id="placeholder_aktuality_archiv"></div>
+							<button id="btn_aktuality_show_all" class="button is-small is-info is-light" disabled">Zobrazit vše</button>
 							<br>
 							<br>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>							
@@ -67,9 +63,9 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="cenik"></a>
-							<!-- Ceník - body -->
-							<module href="src/html/mod/cenik.html"></module>
-							<!-- END Ceník - body -->
+							<h2>Ceník</h2>
+							<p id="placeholder_cenik_cena"></p>
+							<p id="placeholder_cenik_popis"></p>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
@@ -84,9 +80,9 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="rezervace"></a>
-							<!-- Rezervace - body -->
-							<module href="src/html/mod/rezervace.html"></module>
-							<!-- END Rezervace - body -->
+							<h2>Rezervace</h2>
+							<p id="placeholder_rezervace_odst_1"></p> 
+							<p id="placeholder_rezervace_odst_2"></p> 
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
@@ -101,9 +97,14 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="kontakt"></a>
-							<!-- Kontakt - body -->
-							<module href="src/html/mod/kontakt.html"></module>
-							<!-- END Kontakt - body -->
+							<h2>Kontakt</h2>
+							<p id="placeholder_kontakt_odst_1"></p>
+							<p id="placeholder_kontakt_odst_2"></p>
+							<div id="placeholder_kontakt_mapa"></div>	
+							<p id="placeholder_kontakt_odst_3"></p>
+							<p id="placeholder_kontakt_odst_4"></p>		
+							<p><a target="_blank" href="https://www.facebook.com/mostarnakt"><img src="img/facebook_icon.png" alt="Facebook" frameborder="0"></a></p>
+							<br>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
@@ -118,9 +119,10 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="mostovani"></a>
-							<!-- Moštování - body -->
-							<module href="src/html/mod/mostovani.html"></module>
-							<!-- END Moštování - body -->
+							<h2>Moštování</h2>
+							<p id="placeholder_mostovani_odst_1"></p>
+							<p id="placeholder_mostovani_odst_2"></p>
+							<p id="placeholder_mostovani_odst_3"></p>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
@@ -135,9 +137,9 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="odkazy"></a>
-							<!-- Odkazy - body -->
-							<module href="src/html/mod/odkazy.html"></module>
-							<!-- END Odkazy - body -->
+							<h2>Odkazy</h2>
+							<div id="placeholder_odkazy"></div>
+							<br>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
@@ -152,22 +154,21 @@
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div class="content">
 							<a name="prebytky"></a>
-							<!-- Přebytky - body -->
-							<module href="src/html/mod/prebytky.html"></module>
-							<!-- END Přebytky - body -->
+							<h2>Přebytky</h2>
+							<p id="placeholder_prebytky_odst_1"></p>
+							<div id="placeholder_prebytky"></div>
+							<br>
 							<button class="button is-small" onclick="scrollToTop()">Nahoru</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>	
-			
+		</section>
+
 		<!-- Footer -->
 		<module href="src/html/mod/footer.html"></module>
-		<!-- END Footer -->
-
-		<!-- Firebase scripts -->
-		<module href="src/html/mod/firebase.html"></module>
-		<!-- END Firebase scripts -->
+		
+		<!-- JavaScript for loading data from Firebase -->	
+		<script src="jscr/firebase_mod.js" type="module"></script>
 	</body>
 </html>

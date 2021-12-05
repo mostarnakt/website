@@ -4,14 +4,20 @@
   "description": "Web presentation of Moštárna Klatovy",
   "main": "index.html",
   "scripts": {
-    "html-build": "posthtml -c posthtml.json && posthtml -c posthtml-comp.json",
-    "html-build-dev": "posthtml -c posthtml-dev.json && posthtml -c posthtml-comp-dev.json",
+    "html-build": "posthtml -c posthtml.json",
+    "html-build-dev": "posthtml -c posthtml-dev.json",
     "html-watch": "onchange src/html -- npm run html-build",
     "html-watch-dev": "onchange src/html -- npm run html-build-dev",
     "img-build": "imagemin src/img/* --out-dir=_dist/img",
     "img-watch": "onchange src/img -- npm run img-build",
     "jscr-build": "babel src/jscr --out-dir _dist/jscr",
+    "jscr-build-dev": "copyfiles -f src/jscr/* _dist/jscr",
     "jscr-watch": "onchange src/jscr -- npm run jscr-build",
+    "jscr-watch-dev": "onchange src/jscr -- npm run jscr-build-dev",
+    "jscr-mod-build": "webpack --mode=production",
+    "jscr-mod-build-dev": "copyfiles -f src/jscr_mod/* _dist/jscr",
+    "jscr-mod-watch": "onchange src/jscr_mod -- npm run jscr-mod-build",
+    "jscr-mod-watch-dev": "onchange src/jscr_mod -- npm run jscr-mod-build-dev",
     "css-build": "node-sass src/sass/main.scss _tmp/css/main.css",
     "css-build-watch": "onchange src/sass -- npm run css-build",
     "css-ap": "postcss --use autoprefixer --output _tmp/css-ap/main.css _tmp/css/main.css",
@@ -26,13 +32,11 @@
     "seo-watch": "onchange src/seo -- npm run seo-build",
     "stat-build": "copyfiles -f src/stat/* _dist",
     "stat-watch": "onchange src/stat -- npm run stat-build",
-    "att-build": "copyfiles -f src/att/* _dist/att",
-    "att-watch": "onchange src/stat -- npm run att-build",
-    "build": "run-p html-build img-build jscr-build css-all seo-build stat-build att-build",
-    "build-dev": "run-p html-build-dev img-build jscr-build css-all-dev seo-build stat-build att-build",
+    "build": "run-p html-build img-build jscr-build jscr-mod-build css-all seo-build stat-build",
+    "build-dev": "run-p html-build-dev img-build jscr-build-dev jscr-mod-build-dev css-all-dev seo-build stat-build",
     "serve": "http-server _dist -c-1",
-    "start": "npm run build && run-p serve html-watch img-watch jscr-watch css-build-watch css-ap-watch css-nano-watch seo-watch stat-watch att-watch",
-    "start-dev": "npm run build-dev && run-p serve html-watch-dev img-watch jscr-watch css-build-watch css-ap-watch css-copy-watch seo-watch stat-watch att-watch"
+    "start": "npm run build && run-p serve html-watch img-watch jscr-watch jscr-mod-watch css-build-watch css-ap-watch css-nano-watch seo-watch stat-watch",
+    "start-dev": "npm run build-dev && run-p serve html-watch-dev img-watch jscr-watch-dev jscr-mod-watch-dev css-build-watch css-ap-watch css-copy-watch seo-watch stat-watch"
   },
   "keywords": [
     "Moštárna",
@@ -52,6 +56,7 @@
     "copyfiles": "^2.4.1",
     "cssnano": "^5.0.8",
     "cssnano-cli": "^1.0.5",
+    "firebase": "^9.6.0",
     "ftp-deploy": "^2.4.1",
     "htmlnano": "^1.1.1",
     "http-server": "^13.0.2",
@@ -66,6 +71,8 @@
     "postcss-cli": "^8.3.1",
     "posthtml": "^0.16.5",
     "posthtml-cli": "^0.10.0",
-    "posthtml-modules": "^0.7.4"
+    "posthtml-modules": "^0.7.4",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
   }
 }
