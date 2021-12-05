@@ -5,7 +5,7 @@ import { getStorage, getDownloadURL, ref } from "https://www.gstatic.com/firebas
 import { collection, doc, getDoc, getDocs, getFirestore, orderBy, query, where } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"; 
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
 // For PRODUCTION:
-// Webpack will pack just the minimum required
+// Tool will pack just the minimum required
 //import { initializeApp } from 'firebase/app';
 //import { getStorage, getDownloadURL, ref } from 'firebase/storage';
 //import { collection, doc, getDoc, getDocs, getFirestore, orderBy, query, where } from 'firebase/firestore'; 
