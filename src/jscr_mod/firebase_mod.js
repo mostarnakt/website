@@ -170,7 +170,7 @@ async function renderPrebytky(docs) {
 	let s = `<h3>Aktuální nabídka:</h3><table class="table is-bordered"><tr><th>Položka</th><th>Popis</th><th>Kontakt</th></tr>`;	
 	docs.forEach((doc) => {
 		let d = doc.data();
-		s += `<tr><td>${d.polozka}</td><td>${d.polozka}</td><td><a href="tel:${d.telefon.replace(/ /g, '-')}" >${d.telefon.replace(/ /g, '&nbsp;')}</a></td></tr>`;
+		s += `<tr><td>${d.polozka}</td><td>${d.popis}</td><td><a href="tel:${d.telefon.replace(/ /g, '-')}" >${d.telefon.replace(/ /g, '&nbsp;')}</a></td></tr>`;
 	});
 	s += "</table>";
 	let e = document.getElementById("placeholder_prebytky");
